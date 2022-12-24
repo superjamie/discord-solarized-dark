@@ -1,0 +1,199 @@
+/* ==UserStyle==
+@name           Discord Solarized Dark
+@namespace      github.com/superjamie
+@version        1.0.0
+@description    "Spork: just give us access to the stylesheet so we can make it look like whatever the hell we want"
+@updateURL      https://raw.githubusercontent.com/superjamie/discord-solarized-dark/master/style.user.css
+@license        CC0-1.0
+@author         Jamie Bainbridge <jamie.bainbridge@gmail.com>
+@var select user-font "Font" ["Comic Sans MS", "Comic Neue", "PT Sans", "PT Serif"]
+@var select null "NOTE: You must have the font installed on your PC, or enable \"Patch CSP\" in Stylus options to import fonts." ["OK"]
+==/UserStyle== */
+@import url(https://fonts.googleapis.com/css?family=Comic+Neue:700);
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans:400,700);
+@import url(https://fonts.googleapis.com/css?family=PT+Sans:400,700);
+@import url(https://fonts.googleapis.com/css?family=PT+Serif:400,700);
+@-moz-document domain("discord.com") {
+
+/*--COLORS---------------------------------------------------------------------*/
+:root {
+  --S_base03: #002b36;
+  --S_base02: #073642;
+  --S_base01: #586e75;
+  --S_base00: #657b83;
+  --S_base0:  #839496;
+  --S_base1:  #93a1a1;
+  --S_base2:  #eee8d5;
+  --S_base3:  #fdf6e3;
+
+  --S_yellow: #b58900;
+  --S_orange: #cb4b16;
+  --S_red:    #dc322f;
+  --S_magenta:#d33682;
+  --S_violet: #6c71c4;
+  --S_blue:   #268bd2;
+  --S_cyan:   #2aa198;
+  --S_green:  #859900;
+
+  --S_foreground: var(--S_base1);
+  --S_background: var(--S_base03);
+}
+  /* no thanks */
+  [aria-label*="Send a gift"],
+  [aria-label*="Open GIF picker"],
+  [aria-label*="Open sticker picker"],
+  [aria-label*="Download Apps"],
+  [aria-label*="Explore Public Servers"],
+  .guildSeparator-a4uisj
+  /* if i block this then the DMs icon disappears too */
+  /* .listItemWrapper-3d87LP, */
+  {
+    display:none !important;
+  }
+
+/*--FONTS---------------------------------------------------------------------*/
+
+  * { font-family: var(--user-font) !important; }
+  
+  /* fixed-width */
+  pre, code, [class^="codeBlock"], [class^="codeLine"],
+  [class^="syntaxBefore"], [class^="inlineCode"], [class^="syntaxAfter"] {
+    font-family:"PxPlus IBM VGA 8x16" !important;
+    font-size: 16px !important;
+  }
+
+/*--STYLE---------------------------------------------------------------------*/
+
+  /* chat message area */
+  .chatContent-3KubbW,
+  /* user list */
+  .members-3WRCEx,
+  .member-2gU6Ar,
+  /* channel sidebar, but not server image */
+  [aria-label^="Channels"] [aria-label^="User area"]
+  {
+    /* don't make important and you still
+     * get shaded cnannel selection bars */
+    background: var(--S_background);
+  }
+  
+  /* in-channel chat text */
+  .markup-eYLPri,
+  .messageContent-2t3eCI {
+    color: var(--S_foreground) !important;
+  }
+
+  /* URLs */
+  a.anchor-1MIwyf {
+    color: var(--S_blue) !important;
+  }
+  a.anchor-1MIwyf:hover {
+    filter:brightness(1.25) !important;
+    background: var(--S_base02) !important;
+  }
+
+  /* SEO link preview */
+  .embed-hKpSrO {
+    background: var(--S_base02) !important;
+    border-left-color: var(--S_base01) !important;
+  }
+  .embedProvider-1GSN0c,
+  .embedDescription-1DrJxZ {
+    color: var(--S_foreground) !important;
+  }
+
+  /* @username mention */
+  .mention.wrapper-1ZcZW- {
+    color: var(--S_cyan) !important;
+    background: var(--S_base03) !important;
+  }
+  .mention.wrapper-1ZcZW-:hover,
+  .username-h_Y3Us:hover {
+    filter:brightness(1.25) !important;
+    background: var(--S_base02) !important;
+  }
+
+  /* date divider */
+  span.content-3spvdd {
+    background: var(--S_base02) !important;
+  }
+  /* new message divider */
+  div#---new-messages-bar {
+    border-color: var(--S_red) !important;
+  }
+  /* chat scrollbar */
+  [class^="scroller"] {
+    scrollbar-color: var(--S_base01) var(--S_base02) !important;
+  }
+
+  /* blocked user communication */
+  /* "x" */
+  .blockedIcon-cd-3B7,
+  /* "n Blocked messages" */
+  .blockedMessageText-3Zeg3y,
+  /* "Show messages" */ 
+  .blockedAction-2cPk2G {
+    color: var(--S_base01) !important;
+    filter:brightness(0.85) !important;
+  }
+  
+  /* sidebar - normal channel */
+  .channelName-3KPsGw,
+  .icon-2W8DHg {
+    color: var(--S_foreground) !important;
+  }
+  /* sidebar - unread channel */
+  .modeUnread-3Cxepe .channelName-3KPsGw,
+  .modeUnread-3Cxepe .icon-2W8DHg {
+    color: var(--S_base2) !important;
+  }
+  /* sidebar - muted channel */
+  .modeMuted-2T4MDZ .channelName-3KPsGw,
+  .modeMuted-2T4MDZ .icon-2W8DHg {
+    color: var(--S_base01) !important;
+    filter:brightness(0.85) !important;
+  }
+  /* sidebar - server name */
+  .name-3Uvkvr {
+    color: var(--S_base1) !important;
+  }
+  /* sidebar - username */
+  .panels-3wFtMD {
+      background: var(--S_base02) !important;
+  }
+
+  /* top bar - server name */
+  .container-1NXEtd {
+    background: var(--S_base02) !important;
+  }
+  /* top bar - channel subject */
+  .title-31SJ6t,  
+  .container-ZMc96U,
+  .themed-Hp1KC_ {
+    background: var(--S_base02) !important;
+  }
+  /* top bar - channel icon/name/topic */
+  .icon-2xnN2Y,
+  .title-17SveM,
+  .topic-11NuQZ{
+    color: var(--S_base1) !important;
+  }
+
+  /* sidesidebar - server icons */
+  .scroller-3X7KbA {
+    background: var(--S_background) !important;
+  }
+
+  /* random little gradients */
+  .form-3gdLxP::before,
+  .children-3xh0VB::after {
+    background: none !important;
+  }
+}
+
+/**
+ * https://github.com/openstyles/stylus/wiki/Writing-UserCSS
+ * https://raw.githubusercontent.com/{USER}/{REPO}/master/{NAME}.user.css
+ * https://github.com/zuzumi-f/Discord-11/blob/main/base.css
+ */
+/*--END-----------------------------------------------------------------------*/
