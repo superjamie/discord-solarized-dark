@@ -1,5 +1,7 @@
 # Solarized Dark userstyle for Discord
 
+Discord pls don't ban me ;_;
+
 ## Features
 
 * [Solarized Dark](https://ethanschoonover.com/solarized/) colour scheme
@@ -11,7 +13,8 @@
 
 ## Usage
 
-Import [here](https://raw.githubusercontent.com/superjamie/discord-solarized-dark/master/style.user.css)
+* Install [Stylus](https://add0n.com/stylus.html)
+* Import [here](https://raw.githubusercontent.com/superjamie/discord-solarized-dark/master/style.user.css)
 
 ## License
 
