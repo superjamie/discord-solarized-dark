@@ -5,7 +5,8 @@ Discord pls don't ban me ;_;
 ## Features
 
 * [Solarized Dark](https://ethanschoonover.com/solarized/) colour scheme
-* Selectable font
+* Selectable message font: Comic Sans MS, [Comic Neue](https://fonts.google.com/specimen/Comic+Neue), [PT Sans](https://fonts.google.com/specimen/PT+Sans?query=PT+Sans), [PT Serif](https://fonts.google.com/specimen/PT+Serif?query=PT+Serif)
+* Fixed width code font: [IBM VGA 8x16](https://int10h.org/oldschool-pc-fonts/fontlist/font?ibm_vga_8x16)
 
 ## Preview
 
