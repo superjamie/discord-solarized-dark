@@ -1,0 +1,9 @@
+@font-face {
+  font-family: "IBM VGA 8x16";
+  font-style: normal;
+  font-weight:400;
+  src: local("PxPlus IBM VGA 8x16"),
+       url("https://github.com/superjamie/discord-solarized-dark/raw/main/assets/WebPlus_IBM_VGA_8x16.woff") format("woff"),
+       url("https://github.com/superjamie/discord-solarized-dark/raw/main/assets/PxPlus_IBM_VGA_8x16.ttf") format("truetype");
+}
+
