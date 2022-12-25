@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Discord Solarized Dark
 @namespace      github.com/superjamie
-@version        1.1.0
+@version        1.1.1
 @description    "Spork: just give us access to the stylesheet so we can make it look like whatever the hell we want"
 @updateURL      https://raw.githubusercontent.com/superjamie/discord-solarized-dark/master/style.user.css
 @license        CC0-1.0
@@ -68,7 +68,7 @@
   /* Edit channel */
   .text-md-normal-304U3g,
   /* sidebar server name */
-  .name-3Uvkvr,
+  .name-3Uvkvr, .text-xs-bold-1NF1lz, .goalText-mbRUAP,
   /* username */
   .title-338goq,
   /* user number */
@@ -92,7 +92,7 @@
   .heading-lg-semibold-2Z_RS3, .text-xs-normal-3SiVjE, .subtitle-3v29zT
   /* can't !important this or it overrides the code stuff */
   { font-family: var(--user-font); }
-  
+
   /* fixed-width */
   pre, code,
   /* [class^="codeBlock"], [class^="codeLine"], [class^="syntaxBefore"], [class^="inlineCode"], [class^="syntaxAfter"], */
@@ -124,7 +124,7 @@
      * get shaded cnannel selection bars */
     background: var(--S_background);
   }
-  
+
   /* in-channel chat text */
   .markup-eYLPri,
   .messageContent-2t3eCI {
@@ -179,12 +179,12 @@
   .blockedIcon-cd-3B7,
   /* "n Blocked messages" */
   .blockedMessageText-3Zeg3y,
-  /* "Show messages" */ 
+  /* "Show messages" */
   .blockedAction-2cPk2G {
     color: var(--S_base01) !important;
     filter:brightness(0.85) !important;
   }
-  
+
   /* sidebar - normal channel */
   .channelName-3KPsGw,
   .icon-2W8DHg {
@@ -232,7 +232,7 @@
     background: var(--S_base02) !important;
   }
   /* top bar - channel subject */
-  .title-31SJ6t,  
+  .title-31SJ6t,
   .container-ZMc96U,
   .themed-Hp1KC_ {
     background: var(--S_base02) !important;
