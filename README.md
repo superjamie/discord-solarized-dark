@@ -14,7 +14,9 @@ Discord pls don't ban me ;_;
 ## Usage
 
 * Install [Stylus](https://add0n.com/stylus.html)
-* Import [here](https://raw.githubusercontent.com/superjamie/discord-solarized-dark/master/style.user.css)
+* In Stylus options, enable "Patch CSP" so fonts can be imported
+    * If you don't want to do that, install your selected fonts locally on your computer
+* Import this style [here](https://raw.githubusercontent.com/superjamie/discord-solarized-dark/master/style.user.css)
 
 ## License
 

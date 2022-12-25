@@ -1,16 +1,17 @@
 /* ==UserStyle==
 @name           Discord Solarized Dark
 @namespace      github.com/superjamie
-@version        1.0.0
+@version        1.1.0
 @description    "Spork: just give us access to the stylesheet so we can make it look like whatever the hell we want"
 @updateURL      https://raw.githubusercontent.com/superjamie/discord-solarized-dark/master/style.user.css
 @license        CC0-1.0
 @author         Jamie Bainbridge <jamie.bainbridge@gmail.com>
 @var select user-font "Font" ["Comic Sans MS", "Comic Neue", "PT Sans", "PT Serif"]
-@var select null "NOTE: You must have the font installed on your PC, or enable \"Patch CSP\" in Stylus options to import fonts." ["OK"]
+@var select null "NOTE: Enable \"Patch CSP\" in Stylus options to import fonts." ["OK"]
 ==/UserStyle== */
+@import url(https://allfont.net/cache/css/comic-sans-ms.css);
+@import url(https://raw.githubusercontent.com/superjamie/discord-solarized-dark/main/assets/IBM-VGA-8x16.css);
 @import url(https://fonts.googleapis.com/css?family=Comic+Neue:700);
-@import url(https://fonts.googleapis.com/css?family=Noto+Sans:400,700);
 @import url(https://fonts.googleapis.com/css?family=PT+Sans:400,700);
 @import url(https://fonts.googleapis.com/css?family=PT+Serif:400,700);
 @-moz-document domain("discord.com") {
@@ -53,11 +54,57 @@
 
 /*--FONTS---------------------------------------------------------------------*/
 
-  * { font-family: var(--user-font) !important; }
+  *, h1, h2, h3, h4, h5, h6,
+  [class^="text-md"], [aria-hidden="true"], [class^="username"],
+  /* top bar channel name */
+  .title-17SveM,
+  /* welcome to Server */
+  .titleName-2vkJTW, .subtitle-3tY4DQ,
+  .text-sm-normal-3Zj3Iv, .cardTextContainer-z6Fq-u, .cardHeader-GktiNM,
+  /* Welcome to #channel */
+  .header-1dhDWV,
+  /* This is the start of the #channel channel */
+  .description-22d6ux,
+  /* Edit channel */
+  .text-md-normal-304U3g,
+  /* sidebar server name */
+  .name-3Uvkvr,
+  /* username */
+  .title-338goq,
+  /* user number */
+  .subtext-2HDqJ7,
+  /* n new messages since, Mark As Read */
+  .span-3lFnWr, .barButtonBase-Sk2mdB,
+  /* search */
+  .layerContainer-2v_Sit,
+  /* DM group users heading */
+  .membersGroup-2eiWxl, .container-q97qHp,
+  /* user profile popup */
+  .nickname-2rimyL, .userTag-PXLYzP.nameTag-H6kSJ0, .title-1r9MQ6,
+  .roleName-2ZJJYR, .text-xs-medium-2LRpEj,
+  .textarea-_59yqs, .inputDefault-3FGxgL, .input-2g-os5,
+  .messageInput-1KI8l8, .input-2z42oC, .text-sm-medium-3Pz3rB,
+  /* GIF picker popup headings */
+  .contents-3ca1mk,
+  /* DM search */
+  .searchBar-3TnChZ, .searchBarComponent-3N7dCG, .text-sm-bold-1Dtt0R,
+  /* DM start */
+  .heading-lg-semibold-2Z_RS3, .text-xs-normal-3SiVjE, .subtitle-3v29zT
+  /* can't !important this or it overrides the code stuff */
+  { font-family: var(--user-font); }
   
   /* fixed-width */
-  pre, code, [class^="codeBlock"], [class^="codeLine"],
-  [class^="syntaxBefore"], [class^="inlineCode"], [class^="syntaxAfter"] {
+  pre, code,
+  /* [class^="codeBlock"], [class^="codeLine"], [class^="syntaxBefore"], [class^="inlineCode"], [class^="syntaxAfter"], */
+  /* typing `inline` */
+  span.syntaxBefore-3epS3C.before_inlineCode-1zngJj,
+  span.inlineCode-ERyvy_,
+  span.syntaxAfter-2_BrZf.after_inlineCode-2_JXPm,
+  /* typing ```lang block ``` */
+  span.codeBlockSyntax-3mFGiA, span.codeBlockLang-23YLvb,
+  div.codeLine-2C-9aH
+  {
+    /* TODO: Make user selectable */
     font-family:"PxPlus IBM VGA 8x16" !important;
     font-size: 16px !important;
   }
@@ -69,6 +116,7 @@
   /* user list */
   .members-3WRCEx,
   .member-2gU6Ar,
+  .container-2o3qEW,
   /* channel sidebar, but not server image */
   [aria-label^="Channels"] [aria-label^="User area"]
   {
@@ -159,7 +207,24 @@
   }
   /* sidebar - username */
   .panels-3wFtMD {
-      background: var(--S_base02) !important;
+    background: var(--S_base02) !important;
+  }
+  /* sidebar - DM search */
+  [aria-label="Private channels"], .sidebar-1tnWFu {
+    background: var(--S_base02) !important;
+  }
+  /* TODO: sidebar - DM list */
+  /* TODO: sidebar - DM friends list */
+
+  /* DM user profile */
+  div.userPanelInner-1UAR7g,
+  .userProfileInner-3F03PX,
+  .userPanelInnerThemed-2xZFjl
+  {
+    background: var(--S_background);
+  }
+  div.userPanelOverlayBackground-3xwDMp, .overlayBackground-1KgwVi {
+    background: var(--S_base02) !important;
   }
 
   /* top bar - server name */
@@ -189,6 +254,10 @@
   .children-3xh0VB::after {
     background: none !important;
   }
+  /* user with unreadably dark username */
+  span.username-h_Y3Us[style="color: rgb(12, 12, 12);"] {
+    color: var(--S_green) !important;
+  }
 }
 
 /**
@@ -197,3 +266,4 @@
  * https://github.com/zuzumi-f/Discord-11/blob/main/base.css
  */
 /*--END-----------------------------------------------------------------------*/
+
