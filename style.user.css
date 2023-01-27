@@ -1,20 +1,21 @@
 /* ==UserStyle==
 @name           Discord Solarized Dark
 @namespace      github.com/superjamie
-@version        1.1.1
+@version        1.1.2
 @description    "Spork: just give us access to the stylesheet so we can make it look like whatever the hell we want"
 @updateURL      https://raw.githubusercontent.com/superjamie/discord-solarized-dark/master/style.user.css
 @license        CC0-1.0
 @author         Jamie Bainbridge <jamie.bainbridge@gmail.com>
 @var select user-font "Font" ["Comic Sans MS", "Comic Neue", "PT Sans", "PT Serif"]
 @var select null "NOTE: Enable \"Patch CSP\" in Stylus options to import fonts." ["OK"]
+
 ==/UserStyle== */
-@import url(https://allfont.net/cache/css/comic-sans-ms.css);
-@import url(https://raw.githubusercontent.com/superjamie/discord-solarized-dark/main/assets/IBM-VGA-8x16.css);
-@import url(https://fonts.googleapis.com/css?family=Comic+Neue:700);
-@import url(https://fonts.googleapis.com/css?family=PT+Sans:400,700);
-@import url(https://fonts.googleapis.com/css?family=PT+Serif:400,700);
 @-moz-document domain("discord.com") {
+  @import url(https://allfont.net/cache/css/comic-sans-ms.css);
+  @import url(https://raw.githubusercontent.com/superjamie/discord-solarized-dark/main/assets/IBM-VGA-8x16.css);
+  @import url(https://fonts.googleapis.com/css?family=Comic+Neue:700);
+  @import url(https://fonts.googleapis.com/css?family=PT+Sans:400,700);
+  @import url(https://fonts.googleapis.com/css?family=PT+Serif:400,700);
 
 /*--COLORS---------------------------------------------------------------------*/
 :root {
